@@ -6,14 +6,37 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
+import FirebaseCore
+import FirebaseAuth
+
 
 class home: UIViewController {
 
+    @IBOutlet weak var income: UILabel!
+    @IBOutlet weak var expense: UILabel!
+    @IBOutlet weak var total: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func income(_ sender: Any) {
+        performSegue(withIdentifier: "income", sender: self)
+    }
+    
+    @IBAction func expense(_ sender: Any) {
+        performSegue(withIdentifier: "expense", sender: self)
+    }
+    
+    @IBAction func transfer(_ sender: Any) {
+        performSegue(withIdentifier: "transfer", sender: self)
+    }
+    
+    
+    
     
 
     /*
